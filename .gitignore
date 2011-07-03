@@ -1,0 +1,8 @@
+*.pyc
+thumbs.db
+settings.py
+*.bat
+*.komodoproject
+.komodotools
+db
+extract
