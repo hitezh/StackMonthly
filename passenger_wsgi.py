@@ -150,10 +150,10 @@ def listing(tag, db):
     lastmonth = datetime.date(dt.year, dt.month, 1) - datetime.timedelta(days=1)
     return listing(str(lastmonth.year), str(lastmonth.month), tag, db) 
 
-#server static files locally. On dreamhost anything under public is served by Apache
-@route('/:filename')
+#serve static files locally. On dreamhost anything under public is served by Apache
+@route('/static/:filename')
 def server_static(filename):
-    return static_file(filename, root='public/')
+    return static_file(filename, root='public/static')
 
 @route('/static/css/:filename')
 def server_css(filename):

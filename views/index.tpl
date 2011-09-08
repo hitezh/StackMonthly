@@ -83,24 +83,7 @@
 	</div>
 	<script src="http://yandex.st/highlightjs/6.0/highlight.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-    <script type="text/javascript">
-      hljs.initHighlightingOnLoad();
-      jQuery(document).ready(function() {
-      jQuery(".entry-container").hide();
-      //toggle the componenet with class msg_body
-      jQuery(".title-container").click(function()
-      {
-		var div = jQuery(this).next(".entry-container");
-		div.slideToggle(500);
-		if (!div.hasClass("on")){
-		  div.addClass("on"); // someday add styling to 'on' class
-		  div.parent().addClass("seen");
-		} else {
-		  div.removeClass("on");
-		}
-      });
-    });
-    </script>
+	<script src="/static/stack.js"></script>
     <link  href="http://fonts.googleapis.com/css?family=Artifika:regular" rel="stylesheet" type="text/css" >
     <link rel="stylesheet" href="/static/css/zenburn.css" type="text/css" media="all">
   </body>
