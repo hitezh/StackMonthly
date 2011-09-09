@@ -1,4 +1,5 @@
 import time, datetime, calendar
+import random
 
 def get_title(year, month, tag):
     if len(month) > 0:
@@ -21,8 +22,8 @@ def get_tags(from_date,to_date,db):
     
 
 def get_archives(db):
-    rows = db.execute("""select distinct strftime("%Y %m",date([date],'unixepoch'))
-		      as month from tags order by 1 desc""").fetchall()
+    rows = db.execute("""select distinct strftime("%Y %m",date([creation_date],'unixepoch'))
+		      as month from questions order by 1 desc""").fetchall()
     return rejig_months(rows)
 
 def get_archives_for_tag(tag, db):
@@ -51,3 +52,10 @@ def questions_without_tag(from_date, to_date, db):
                 and questions.creation_date >= ? and questions.creation_date < ?
                 order by questions.up_vote_count desc limit 20
                 """,(from_date,to_date)).fetchall()
+    
+def randBlurb():
+   return random.choice(
+	['A monthly digest of the best questions on Stack Overflow',
+	 'SELECT TOP 20 Questions FROM StackOverflow GROUP BY Month, Tag ORDER BY Votes DESC',
+	 'SELECT Questions FROM StackOverflow GROUP BY Month, Tag ORDER BY Votes DESC LIMIT 20'])
+

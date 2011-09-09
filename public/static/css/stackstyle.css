@@ -163,9 +163,11 @@ h1 {
 	padding: 0;
 }
 
-h2 {
-font-size: 183%;
+.subtitle{
+	margin-top: 50px;
+	position: absolute;
 }
+
 .feed {
 	background: url(/static/images/feed.png) no-repeat ;
 	margin-left: 10px;
@@ -236,9 +238,6 @@ float: left;
 display: block;
 color: #AAA;
 text-align: left;
-background: url(/static/images/calendar.png) no-repeat left center;
-padding-left: 20px;
-padding-right: 10px;
 }
 
 .tags {float: right;

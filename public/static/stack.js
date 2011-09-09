@@ -11,7 +11,8 @@
 	  div.removeClass("on");
 	}
       });
-      $("body").keypress(function(event) {
+      
+      $(document).keypress(function(event) {
 	if ( event.which == 106 ) { // j - move up
 	  $(".on").slideToggle(500).removeClass("on").parent().prev().addClass("seen").find(".entry-container").slideToggle(500).addClass("on");
 	} else if ( event.which == 107 ) { // k - move down

@@ -8,7 +8,7 @@
 	    <div class="title">
 	      <h2 class="questiontitle">{{row["title"]}}</h2>
 	      <div class="questiondata fix">
-                <span class="author">Asked <a href="http://stackoverflow.com/questions/{{row["qid"]}}">on {{time.strftime("%a, %d %b %Y",time.gmtime(row["creation_date"]))}}</a>
+                <span class="author">Asked on <a href="http://stackoverflow.com/questions/{{row["qid"]}}">{{time.strftime("%a, %d %b %Y",time.gmtime(row["creation_date"]))}}</a>
     by <a href="http://stackoverflow.com/users/{{row["qowner_id"]}}" target="blank" >{{row["qowner_name"]}}</a></span>
                 <span class="tags">
                   %for tag in row["tags"].split(','):

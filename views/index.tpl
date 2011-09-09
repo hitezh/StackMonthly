@@ -1,5 +1,6 @@
 %import calendar
 %from urllib import quote
+%import utils
 <!doctype html>
 <html>
   <head>
@@ -22,7 +23,8 @@
     <div id="wrapper" >
       <div id="header-container" >
 	<div id="header" class="fix" >
-	  <h1 ><a href="/">StackMonthly</a></h1>
+	  <h1><a href="/">StackMonthly</a></h1>
+	  <code class="subtitle">{{utils.randBlurb()}}</code>
 	  <div ><a href="/about">About</a>
 	    <a href="/feeds" class="feed">Feeds</a></div>
 	</div><!-- /header -->
