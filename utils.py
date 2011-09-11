@@ -55,7 +55,8 @@ def questions_without_tag(from_date, to_date, db):
     
 def randBlurb():
    return random.choice(
-	['A monthly digest of the best questions on Stack Overflow',
-	 'SELECT TOP 20 Questions FROM StackOverflow GROUP BY Month, Tag ORDER BY Votes DESC',
-	 'SELECT Questions FROM StackOverflow GROUP BY Month, Tag ORDER BY Votes DESC LIMIT 20'])
+	["A monthly digest of the best questions on StackOverflow",
+	 "SELECT TOP 20 Questions FROM StackOverflow GROUP BY Month, Tag ORDER BY Votes DESC",
+	 "Tip: press 'j' to go to the next question, 'k' for the previous one.",
+	 "SELECT Questions FROM StackOverflow GROUP BY Month, Tag ORDER BY Votes DESC LIMIT 20"])
 
