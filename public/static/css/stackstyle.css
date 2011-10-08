@@ -199,6 +199,7 @@ clear: both;
 overflow: hidden;
 padding-bottom: 1em;
 margin-bottom: 10px;
+page-break-after: always;
 }
 .question .date {
     height: 48px;
@@ -333,4 +334,9 @@ font-size: 116%;
 line-height: 1.6em;
 margin-bottom: 1em;
 overflow: hidden;
+}
+
+@media print {
+.question {page-break-after: always;}
+#sidebar {visibility: hidden;}
 }
